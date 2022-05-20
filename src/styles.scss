@@ -1,0 +1,140 @@
+@import "./scss/_reset.scss";
+@import "./scss/_mixin.scss";
+@import "./scss/_variables.scss";
+
+.header {
+  background-color: $purple;
+
+  &__informatives-top {
+    background-color: $darkPurple;
+    color: $white;
+    padding: 7px;
+
+    @include flex();
+
+    &--text {
+      @include flex(center, flex-end);
+
+      font-size: calculator-rem(12);
+      font-weight: 300;
+
+      &::after {
+        content: "";
+        width: 1px;
+        height: 12px;
+        background-color: $white;
+        display: inline-block;
+
+        margin: 0 10px 0 5px;
+      }
+
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    &--text-strong {
+      font-weight: 700;
+      margin: 0 5px;
+
+      @include flex(center, flex-end);
+
+      font-size: calculator-rem(12);
+    }
+
+    &--text-margin {
+      font-weight: 300;
+      margin-left: 5px;
+    }
+  }
+
+  &__informative-wrapper {
+    max-width: 495px;
+    @include flex();
+  }
+
+  &__container {
+    @include container-center();
+    @include flex();
+  }
+
+  &__logo {
+    max-width: 238px;
+    width: 100%;
+
+    &--text {
+      font-size: calculator-rem(48);
+      font-family: "ovo", sans-serif;
+      text-transform: uppercase;
+
+      text-decoration: none;
+
+      color: $white;
+    }
+  }
+
+  &__menu {
+    @include flex(space-between);
+    flex: 1;
+
+    margin: 0 31px;
+  }
+ 
+  &__menu-wrapper {
+    position: relative;
+  }
+
+  &__menu-department {
+    text-decoration: none;
+
+    color: $white;
+    font-weight: 700;
+    font-size: calculator-rem(14);
+  }
+
+  &__menu-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    background: red;
+    max-width: 194px;
+    width: 100%;
+
+    padding: 12px 26px;
+  }
+
+  &__menu-category {
+    text-decoration: none;
+
+    color: $black;
+    font-weight: 400;
+    font-size: calculator-rem(13);
+    @include flex();
+    height: 40px;
+  }
+
+  &__wrapper-icons {
+    @include flex();
+
+    max-width: 135px;
+    width: 100%;
+  }
+
+  &__icons {
+    &--image {
+      max-width: 23px;
+      max-height: 23px;
+
+      margin-right: 31px;
+    }
+
+    &:last-child {
+      .header__icons--image {
+        margin-right: 0;
+      }
+    }
+  }
+}
