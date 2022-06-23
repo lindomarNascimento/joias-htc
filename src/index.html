@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700;800&family=Ovo&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./styles.css" />
     <title>Loja de Joias</title>
   </head>
@@ -22,60 +26,106 @@
         <div class="header__logo">
           <a class="header__logo--text" href="/">htc joias</a>
         </div>
-        <nav class="header__menu">
-          <div class="header__menu-wrapper">
-            <a href="index.html" class="header__menu-department">
-              Água marinha
-            </a>
-            <div class="header__menu-items">
-              <div class="header__menu-wrapper">
-                <a href="index.html" class="header__menu-category">Agua marina incolor</a>
-              </div> 
-              <div class="header__menu-wrapper">
-                <a href="index.html" class="header__menu-category">agua marina - azul</a>
-              </div> 
-              <div class="header__menu-wrapper">
-                <a href="index.html" class="header__menu-category">agua marina - verde</a>
-              </div> 
-            </div>
-          </div> 
-          <div class="header__menu-wrapper">
-            <a href="index.html" class="header__menu-department">Ametista</a>
-          </div> 
-          <div class="header__menu-wrapper">
-            <a href="index.html" class="header__menu-department">Berilo</a>
-          </div> 
-          <div class="header__menu-wrapper">
-            <a href="index.html" class="header__menu-department">Esmeralda</a>
-          </div> 
-          <div class="header__menu-wrapper">
-            <a href="index.html" class="header__menu-department">Topázio imperial</a>
-          </div> 
-          <div class="header__menu-wrapper">
-            <a href="index.html" class="header__menu-department">Turmalina</a>
-          </div> 
-          <div class="header__menu-wrapper">
-            <a href="index.html" class="header__menu-department">Outros</a>
-          </div> 
-        </nav>
+        <div class="header__menu-hamburger">
+          <img src="./assets/menu-mobile.png" alt="hamburguer menu mobile" />
+        </div>
+        <nav class="header__menu"></nav>
         <div class="header__wrapper-icons">
-          <div class="header__icons">
-            <img class="header__icons--image" src="./assets/loupe.png" alt="icone de lupa" title="" />
+          <div class="header__icons lupe">
+            <img
+              class="header__icons--image"
+              src="./assets/loupe.png"
+              alt="icone de lupa"
+              title=""
+            />
           </div>
-          <div class="header__icons">
-            <img class="header__icons--image" src="./assets/user.png" alt="icone de usuario" title="" />
+          <div class="header__icons user">
+            <img
+              class="header__icons--image"
+              src="./assets/user.png"
+              alt="icone de usuario"
+              title=""
+            />
           </div>
-          <div class="header__icons">
-            <img class="header__icons--image"
+          <div class="header__icons bag">
+            <img
+              class="header__icons--image"
               src="./assets/shopping-bag.png"
               alt="icone de sacola"
               title=""
             />
           </div>
         </div>
+        <div class="header__menu-mobile">
+          <div class="shadow header__menu-mobile-shadow">
+            <img
+              src="./assets/close-menu.png"
+              alt=""
+              class="header__menu-mobile-close close-menu"
+            />
+          </div>
+          <div class="header__menu-mobile-structure">
+            <div class="header__menu-mobile-wrapper">
+              <div class="header__menu-mobile-wraper-department">
+                <a
+                  href="index.html"
+                  class="header__menu-department header__menu-mobile-department"
+                >
+                  Água marinha
+                </a>
+                <span class="iconArrow header__menu-mobile-icon-arrow">
+                  <img src="./assets/arrow-down.png" alt="" />
+                </span>
+              </div>
+              <div class="header__menu-mobile-items">
+                <div class="header__menu-wrapper">
+                  <a href="index.html" class="header__menu-category"
+                    >Agua marina incolor</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="header__menu-mobile-wrapper">
+              <div class="header__menu-mobile-wraper-department">
+                <a
+                  href="index.html"
+                  class="header__menu-department header__menu-mobile-department"
+                >
+                  Água marinha
+                </a>
+                <span class="iconArrow header__menu-mobile-icon-arrow">
+                  <img src="./assets/arrow-down.png" alt="" />
+                </span>
+              </div>
+              <div class="header__menu-mobile-items">
+                <div class="header__menu-wrapper">
+                  <a href="index.html" class="header__menu-category"
+                    >Agua marina incolor</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </header>
+    <main class="body">
+      <section class="main-banner swiper">
+        <div class="swiper-button-prev main-banner__arrow"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-wrapper">
+          <img src="./assets/main-banner.png" alt="" class="swiper-slide" />
+          <img src="./assets/main-banner.png" alt="" class="swiper-slide" />
+          <img src="./assets/main-banner.png" alt="" class="swiper-slide" />
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </section>
+
+      <section class="shelf"></section>
+    </main>
   </body>
 
+  <script type="module" src="./scripts/swipper-carrousel.js"></script>
   <script type="text/javascript" src="./scripts/index.js"></script>
 </html>

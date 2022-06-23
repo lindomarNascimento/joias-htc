@@ -16,3 +16,9 @@
     margin: 0 5%;
   }
 }
+
+@mixin media-mob() {
+  @media (max-width: 1024px) {
+    @content
+  }
+}
